@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CW BY DIVYANSH | 3D Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#060816;color:#fff;overflow-x:hidden;}
+
+    body::before{
+      content:"";position:fixed;width:500px;height:500px;
+      background:#00e5ff33;filter:blur(120px);
+      top:-150px;left:-150px;z-index:-1;
+    }
+
+    body::after{
+      content:"";position:fixed;width:400px;height:400px;
+      background:#8b5cf633;filter:blur(120px);
+      bottom:-120px;right:-120px;z-index:-1;
+    }
+
+    header{
+      position:fixed;top:0;width:100%;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:20px 8%;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      z-index:1000;
+    }
+
+    .logo{font-size:1.4rem;font-weight:700;color:#00e5ff;}
+
+    nav a{
+      color:#fff;text-decoration:none;margin-left:25px;transition:0.3s;
+    }
+
+    nav a:hover{color:#00e5ff;}
+
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:40px;padding:120px 8% 60px;flex-wrap:wrap;
+    }
+
+    .hero-text{flex:1;min-width:280px;}
+
+    .hero-text h1{
+      font-size:3.5rem;line-height:1.1;margin-bottom:20px;
+    }
+
+    .hero-text h1 span{
+      color:#00e5ff;text-shadow:0 0 20px #00e5ff;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;line-height:1.8;margin-bottom:30px;max-width:550px;
+    }
+
+    .btn{
+      display:inline-block;padding:14px 28px;border-radius:40px;
+      background:#00e5ff;color:#000;font-weight:600;
+      text-decoration:none;transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px #00e5ff66;
+    }
+
+    .hero-image{
+      flex:1;min-width:800px;
+      display:flex;justify-content:center;align-items:center;
+    }
+
+    .profile{
+      width:340px;height:340px;border-radius:50%;
+      object-fit:cover;border:5px solid #00e5ff;
+      box-shadow:
+        0 0 25px #00e5ff,
+        0 0 80px #00e5ff55;
+      animation:float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-15px);}
+    }
+
+    section{padding:90px 8%;}
+
+    .section-title{
+      text-align:center;font-size:2.2rem;
+      margin-bottom:50px;color:#00e5ff;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      backdrop-filter:blur(14px);
+      padding:35px;
+    }
+
+    .about{text-align:center;line-height:1.9;color:#dbeafe;}
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:20px;
+    }
+
+    .skill{
+      padding:25px;text-align:center;border-radius:20px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.35s;
+    }
+
+    .skill:hover{
+      transform:translateY(-8px);
+      box-shadow:0 15px 30px rgba(0,229,255,0.15);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .project{
+      padding:28px;border-radius:22px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.35s;
+    }
+
+    .project:hover{
+      transform:translateY(-8px);
+      box-shadow:0 15px 35px rgba(0,229,255,0.12);
+    }
+
+    .project h3{color:#00e5ff;margin-bottom:12px;}
+
+    .project p{color:#cbd5e1;line-height:1.7;}
+
+    .contact{text-align:center;line-height:2;}
+
+    footer{
+      text-align:center;padding:25px;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    @media(max-width:768px){
+      nav{display:none;}
+      .hero{text-align:center;justify-content:center;}
+      .hero-text h1{font-size:2.5rem;}
+      .profile{width:240px;height:240px;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">CW BY DIVYANSH</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Divyanshu Prajapat</span></h1>
+    <p>
+      BCA Student • Web Developer • YouTube Educator • Tech Creator.
+      I create coding tutorials, modern websites and practical computer learning content.
+    </p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+
+  <div class="hero-image">
+    <!-- Rename your uploaded photo to profile.jpg and keep it in same folder -->
+    <img src="profile.jpg" alt="Divyanshu Prajapat" class="profile">
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="glass about">
+    I am a BCA student from Rajasthan and I run a YouTube channel named
+    <strong>CW BY DIVYANSH</strong>. I love web development, coding and teaching
+    computer skills through practical projects and videos.
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML5</div>
+    <div class="skill">CSS3</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Responsive Design</div>
+    <div class="skill">MS Excel</div>
+    <div class="skill">Video Editing</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+
+    <div class="project">
+      <h3>3D Portfolio Website</h3>
+      <p>Modern animated portfolio with glowing effects and responsive layout.</p>
+    </div>
+
+    <div class="project">
+      <h3>Excel Salary Dashboard</h3>
+      <p>Attendance, HRA, DA, PF and salary management system in Excel.</p>
+    </div>
+
+    <div class="project">
+      <h3>Coding Learning Website</h3>
+      <p>Educational website for HTML, coding and computer practical courses.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="glass contact">
+    <p><strong>Name:</strong> Divyanshu Prajapat</p>
+    <p><strong>Phone:</strong> +91 9119131923</p>
+    <p><strong>Location:</strong> Rajasthan, India</p>
+    <p><strong>YouTube:</strong> CW BY DIVYANSH</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Divyanshu Prajapat | CW BY DIVYANSH | All Rights Reserved
+</footer>
+
+</body>
+</html>
